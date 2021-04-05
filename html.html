@@ -16,30 +16,36 @@
         /* nav */
         
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-        body{
-            margin:0px;
+        body {
+            margin: 0px;
+            overflow: hidden;
+            transition: 0.2s;
         }
+        
+        button {
+            outline: none;
+        }
+        
         .navli,
         .nava {
             font-family: 'Bebas Neue', cursive;
             font-weight: 500;
-            font-size: 3.9vw;
+            font-size: 3vw;
             color: #0e1111;
             text-decoration: none;
-            display:flex;
-            top:50%;
+            display: flex;
+            top: 50%;
+            transition: 0.2s;
         }
         
-        .theme 
-        {
+        .theme {
             padding: .5vw .5vw;
             font-family: 'Bebas Neue', cursive;
             font-weight: 400;
-            width:5vw;
-            font-size:1.1vw;
-            line-height:0.5vw;
-            height:100%;
+            width: 5vw;
+            font-size: 1.1vw;
+            vertical-align: center;
+            height: 100%;
             color: #fffff2;
             text-decoration: none;
             background-color: #0e1111;
@@ -48,28 +54,26 @@
             border-width: 0.2vw;
             border-radius: 1.7vw;
             cursor: pointer;
-            transition: all 0.3s ease 0s;
-            
-  
+            transition: all 0.2s ease 0s;
         }
         
         .theme:hover {
             background-color: #fffff2;
             color: #0e1111;
-            
         }
         
         .logo {
-            width: 6vw;
+            width: 4.5vw;
             cursor: pointer;
-            display:block;
+            display: block;
+            transition: 0.2s;
         }
-
-        #cart{
-            color:#0e1111;
-            margin-right:0.3vw;
+        
+        #cart {
+            color: #0e1111;
+            margin-right: 0.3vw;
             font-size: 2.5vw;
-            width:auto;
+            width: auto;
         }
         
         .sidebtn {
@@ -77,9 +81,8 @@
             margin-left: auto;
             display: flex;
             justify-content: center;
-            height:3vw;
-            vertical-align:middle;
-            
+            height: 3vw;
+            vertical-align: middle;
         }
         
         .navul {
@@ -87,16 +90,17 @@
             margin-left: 2vw;
         }
         
-        .navul .navli {
+        .navli {
             display: inline-block;
             padding: 0vw 1vw;
         }
         
         .navul .navli a:hover {
             font-weight: 700;
-            transition:0.2s;
+            transition: 0.2s;
         }
         /*HEADER FÖR DATOR*/
+        
         .header {
             display: flex;
             justify-content: flex-start;
@@ -110,16 +114,18 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            width:auto;
-            height:6.2vw;
-            
+            width: auto;
+            height: 4vw;
+            transition: 0.2s;
         }
         /*HEADER FÖR MOBIL*/
+        
         header {
             display: none;
-            justify-content:space-evenly;
-            
-            padding: 10px 3%;
+            height: 10vw;
+            padding: 5px;
+            justify-content: flex-start;
+            align-items: center;
             background: url(../../pics/noiselight.png) top center repeat;
             background-size: cover;
             border-bottom: 3px;
@@ -128,85 +134,168 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            width:auto;
-            height:6.2vw;
-            
         }
-
-        .logomob{
-                display:none;
-                width: 9vw;
-                
-            }
-
-        #navknapp
-        {
-            color:#0e1111;
-            
-        }
-        .navulmob{
-            display:flex;
+        
+        .navulmob {
             list-style-type: none;
-            justify-content:space-evenly;
-            width:auto;
-            height:auto;
-            margin-left: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navlimob {
+            float: left;
+            padding: 5px;
+        }
+        
+        .logomob {
+            width: 11vw;
+            cursor: pointer;
+            margin-right: 0;
+        }
+        
+        .navmob {
             margin-right: auto;
+            width: 30%
         }
-        .navlimob{
-            float:left;
-            
+        
+        #burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #0e1111;
+            margin: 5px;
+            transition: all 0.3s ease;
         }
-        .navmob{
-            width:100%;
+        
+        #burger {
+            cursor: pointer;
         }
-
+        
+        .sidebtnmob {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #cartmob {
+            display: block;
+            align-items: center;
+            margin-right: 10px;
+        }
+        
+        #cartimob {
+            color: #0e1111;
+            font-size: 35px;
+            margin-top: 5px;
+        }
+        /*NAV SIDA*/
+        
+        #navside {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #fffff2;
+            left: -100%;
+            transition: .4s
+        }
+        
+        #navside.active {
+            left: 0%;
+        }
+        
+        .navsideul {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            padding: 0px;
+            margin-top: 0px;
+            justify-content: center;
+        }
+        
+        .navsideul li {
+            text-align: center;
+            border-bottom-style: solid;
+            border-bottom-color: #0e1111;
+        }
+        
+        .navsidea {
+            display: block;
+            font-family: 'Bebas Neue', cursive;
+            font-weight: 500;
+            font-size: 12vw;
+            color: #0e1111;
+            text-decoration: none;
+            width: 100%;
+            cursor: pointer;
+        }
+        
+        .show {
+            transform: translate3d(0vw, 0, 0);
+        }
+        
+        .toggle #line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .toggle #line2 {
+            opacity: 0;
+        }
+        
+        .toggle #line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
         /*sizeadjust*/
         
         @media(max-width:529px) {
             main {
                 width: 100%;
             }
-            .navli .nava{
-                display:none;
+            .navli .nava {
+                display: none;
             }
-            
-            .logo{
-                display:none;
+            .logo {
+                display: none;
             }
-            .sidebtn{
-                display:none;
+            .sidebtn {
+                display: none;
             }
-            .logomob{
-                display:block;
-                
+            .logomob {
+                display: block;
             }
-            .header{
-                display:none;
+            .header {
+                display: none;
             }
-            header{
-                display:flex;
+            header {
+                display: flex;
             }
-                
+            body {
+                background-color: #fffff2;
+            }
+            #navside {
+                opacity: 100;
+            }
         }
-
-        @media(min-width:530px) 
-        {
+        
+        @media(min-width:530px) {
             main {
                 width: 530px;
             }
-            
+            #navside {
+                opacity: 0;
+            }
         }
         
-        @media(min-width:900px) 
-        {
+        @media(min-width:900px) {
             main {
                 width: 850px;
             }
-            
+            #navside {
+                opacity: 0;
+            }
         }
-
-        /* nav dark mode */
+        /* dark mode */
         
         .dark {
             background-color: #0e1111;
@@ -220,54 +309,43 @@
         .darktext {
             color: #fffff2;
         }
-
-        .darkbutton{
+        
+        .darktextmob {
+            color: #fffff2;
+        }
+        
+        .darkbutton {
             background-color: #fffff2;
             color: #0e1111;
-            border-color:#0e1111;
+            border-color: #0e1111;
         }
-        .darkbutton:hover{
+        
+        .darkbuttonmob {
+            background-color: #fffff2;
+            color: #0e1111;
+            border-color: #0e1111;
+        }
+        
+        .darkbutton:hover {
             background-color: #0e1111;
             color: #fffff2;
-            border-color:#fffff2;
+            border-color: #fffff2;
         }
-        
-        
-
-        /*
-        .navul - ul container för listan li i nav
-        .navli - li container för länkar i nav
-        nava - a tagg för länkar i nav
-        sidebtn - div för knappar vid sidan av nav
-        .dark... - klassen för mörka motsvarigheten av hemsidans delar
-        .header - Nav för större skärmar
-        header - Nav för mindre skärmar
-        .navulmob - ul container för listan li i nav
-        .navlimob - li container för länkar i nav
-        .navmob - nav container för mobil
-
-        FIXA:   MOBILNAV
-                MODE TEXT I MITTEN?
-                NAV TEXT I MITTEN?
-        */
-
         /*Site-Specific*/
-
+        
         main {
             margin-left: auto;
             margin-right: auto;
             display: flex;
-            justify-content: center; 
-        }
-
-        #vid{
-            width:100%;
+            justify-content: center;
         }
         
-        
-       
+        #vid {
+            width: 100%;
+        }
     </style>
     <script>
+        //Darkmode för större skärmar
         $(document).ready(function() {
             $('.theme').on("click", function()
 
@@ -275,60 +353,96 @@
                     if ($("body").hasClass("dark")) {
                         $("body").removeClass("dark");
                         $(".header").removeClass("darknav");
-                        $("header").removeClass("darknav");
                         $(".nava").removeClass("darktext");
                         $("#carti").removeClass("darktext");
                         $(".logo").attr("src", "../../pics/logosvartcirk.png");
-                        $(".logomob").attr("src", "../../pics/logosvartcirk.png");
                         $(".theme").removeClass("darkbutton");
-                        $(".theme").removeClass("darkbutton:hover")
-                        
+                        $(".theme").removeClass("darkbutton:hover");
 
                     } else {
                         $("body").addClass("dark");
                         $(".header").addClass("darknav");
-                        $("header").addClass("darknav");
                         $(".nava").addClass("darktext");
                         $("#carti").addClass("darktext");
                         $(".logo").attr("src", "../../pics/logovit.png");
-                        $(".logomob").attr("src", "../../pics/logovit.png");
                         $(".theme").addClass("darkbutton");
-                        $(".theme").addClass("darkbutton:hover")  
+                        $(".theme").addClass("darkbutton:hover");
                     }
+
                 });
+
         });
+
+        function show() {
+            document.getElementById('navside').classList.toggle('active');
+            burger.classList.toggle('toggle')
+        }
     </script>
 </head>
 
 <body>
+    <!--MOBILNAV-->
     <header>
+
         <nav class="navmob">
+
             <ul class="navulmob">
-            <li class="navlimob"><a href="#"><i id="navknapp" class="fa fa-bars"></i></a></li>
-            <li class="navlimob"><img class="logomob" src="../../pics/logosvartcirk.png" alt="logo"></li>
-            <li class="navlimob">p</li>
-        </ul>
+
+                <li class="navlimob">
+
+                    <div id="burger" onclick="show()">
+                        <div id="line1"></div>
+                        <div id="line2"></div>
+                        <div id="line3"></div>
+                    </div>
+                </li>
+                <li class="navlimob">
+                    <div class="logomobdiv"><img class="logomob" src="../../pics/logosvartcirk.png" alt="logo"></div>
+                </li>
+
+            </ul>
+
         </nav>
+
+
+        <div class="sidebtnmob">
+
+            <a id="cartmob" href="#"><i id="cartimob" class="fa fa-shopping-cart fa-lg" ></i></a>
+        </div>
     </header>
 
+    <!--NAV LINKS SIDE-->
+
+    <div id="navside">
+        <ul class="navsideul">
+
+            <li class="navsideli"><a href="#" class="navsidea">Shop</a></li>
+            <li class="navsideli"><a href="#" class="navsidea">Gallery</a></li>
+            <li class="navsideli"><a href="#" class="navsidea">About</a></li>
+            <li class="navsideli"><a href="#" class="navsidea">Contact</a></li>
+
+        </ul>
+    </div>
+
+    <!--DATORNAV-->
 
     <div class="header">
         <img class="logo" src="../../pics/logosvartcirk.png" alt="logo">
         <nav>
             <ul class="navul">
                 <li class="navli"><a class="nava" href="#">Shop </a></li>
-                <li class="navli"><a class="nava" href="#">About </a></li>
                 <li class="navli"><a class="nava" href="#">Gallery</a></li>
+                <li class="navli"><a class="nava" href="#">About </a></li>
                 <li class="navli"><a class="nava" href="#">Contact</a></li>
             </ul>
-            
+
         </nav>
         <div class="sidebtn">
             <a id="cart" href="#"><i id="carti" class="fa fa-shopping-cart fa-lg" ></i></a>
             <button class="theme">Mode</button>
-            
+
         </div>
-        
+
     </div>
 
 
@@ -340,6 +454,7 @@
         </div>
 
     </main>
+    <footer></footer>
 </body>
 
 </html>
