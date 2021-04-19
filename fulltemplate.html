@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Orions Belt UF</title>
+
+
+    <style>
+        /* nav */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        body {
+            margin: 0px;
+            /*overflow: scroll;*/
+            transition: 0.2s ease 0s;
+            background: rgb(255, 255, 255);
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 68%, rgba(230, 230, 230, 1) 100%);
+        }
+        
+        main {
+            position: relative;
+        }
+        
+        button {
+            outline: none;
+        }
+        
+        .navli,
+        .nava {
+            font-family: 'Bebas Neue', cursive;
+            font-weight: 500;
+            font-size: 3vw;
+            color: #0e1111;
+            text-decoration: none;
+            display: flex;
+            top: 50%;
+            transition: 0.2s ease 0s;
+        }
+        
+        .theme {
+            padding: .5vw .5vw;
+            font-family: 'Bebas Neue', cursive;
+            font-weight: 400;
+            width: 5vw;
+            font-size: 1.1vw;
+            vertical-align: center;
+            height: 100%;
+            color: #fffff2;
+            text-decoration: none;
+            background-color: #0e1111;
+            border: solid;
+            border-color: #0e1111;
+            border-width: 0.2vw;
+            border-radius: 1.7vw;
+            cursor: pointer;
+            transition: all 0.2s ease 0s;
+        }
+        
+        .theme:hover {
+            background-color: #fffff2;
+            color: #0e1111;
+        }
+        
+        .logo {
+            width: 4.5vw;
+            cursor: pointer;
+            display: block;
+            transition: 0.2s ease 0s;
+        }
+        
+        #cart {
+            color: #0e1111;
+            margin-right: 0.3vw;
+            font-size: 2.5vw;
+            width: auto;
+        }
+        
+        .sidebtn {
+            width: 6vw;
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            height: 3vw;
+            vertical-align: middle;
+        }
+        
+        .navul {
+            list-style: none;
+            margin-left: 2vw;
+        }
+        
+        .navli {
+            display: inline-block;
+            padding: 0vw 1vw;
+        }
+        
+        .navul .navli a:hover {
+            font-weight: 700;
+            transition: 0.2s ease 0s;
+        }
+        /*HEADER FÖR DATOR*/
+        
+        .header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 6%;
+            background: url(pics/noiselight.png) top center repeat;
+            background-size: cover;
+            border-bottom: 3px;
+            border-bottom-color: #0e1111;
+            border-bottom-style: solid;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: auto;
+            height: 4vw;
+            transition: 0.2s;
+        }
+        /*HEADER FÖR MOBIL*/
+        
+        header {
+            display: none;
+            height: 10vw;
+            padding: 5px;
+            justify-content: flex-start;
+            align-items: center;
+            background: url(pics/noiselight.png) top center repeat;
+            background-size: cover;
+            border-bottom: 3px;
+            border-bottom-color: #0e1111;
+            border-bottom-style: solid;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navulmob {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navlimob {
+            float: left;
+            padding: 5px;
+        }
+        
+        .logomob {
+            width: 11vw;
+            cursor: pointer;
+            margin-right: 0;
+        }
+        
+        .navmob {
+            margin-right: auto;
+            width: 30%
+        }
+        
+        #burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #0e1111;
+            margin: 5px;
+            transition: all 0.2s ease;
+        }
+        
+        #burger {
+            cursor: pointer;
+        }
+        
+        .sidebtnmob {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #cartmob {
+            display: block;
+            align-items: center;
+            margin-right: 10px;
+        }
+        
+        #cartimob {
+            color: #0e1111;
+            font-size: 35px;
+            margin-top: 5px;
+        }
+        /*NAV SIDA*/
+        
+        #navside {
+            position: absolute;
+            width: 100%;
+            background: rgb(255, 255, 255);
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 68%, rgba(230, 230, 230, 1) 100%);
+            left: -100%;
+            transition: .4s;
+            z-index: 100;
+        }
+        
+        #navside.active {
+            left: 0%;
+            z-index: 100;
+        }
+        
+        .navsideul {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            padding: 0px;
+            margin-top: 0px;
+            justify-content: center;
+        }
+        
+        li.navsideli {
+            text-align: center;
+            border-bottom-style: solid;
+            border-bottom-color: #0e1111;
+        }
+        
+        .navsidea {
+            font-family: 'Bebas Neue', cursive;
+            font-weight: 500;
+            font-size: 12vw;
+            color: #0e1111;
+            text-decoration: none;
+            width: 100%;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        .show {
+            transform: translate3d(0vw, 0, 0);
+        }
+        
+        .toggle #line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .toggle #line2 {
+            opacity: 0;
+        }
+        
+        .toggle #line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+        /*sizeadjust*/
+        
+        @media(max-width:529px) {
+            main {
+                width: 100%;
+            }
+            .navli .nava {
+                display: none;
+            }
+            .logo {
+                display: none;
+            }
+            .sidebtn {
+                display: none;
+            }
+            .logomob {
+                display: block;
+            }
+            .header {
+                display: none;
+            }
+            header {
+                display: flex;
+            }
+            body {
+                background-color: #fffff2;
+            }
+            #navside {
+                opacity: 100;
+            }
+        }
+        
+        @media(min-width:530px) {
+            main {
+                width: 100%;
+            }
+            #navside {
+                opacity: 0;
+            }
+        }
+        
+        @media(min-width:900px) {
+            main {
+                width: 100%;
+            }
+            #navside {
+                opacity: 0;
+            }
+        }
+        /* dark mode */
+        
+        .dark {
+            background-color: #0e1111;
+        }
+        
+        .darknav {
+            background: url(pics/noisedark.png) top center repeat;
+            border-color: #fffff2;
+        }
+        
+        .darktext {
+            color: #fffff2;
+        }
+        
+        .darktextmob {
+            color: #fffff2;
+        }
+        
+        .darkbutton {
+            background-color: #fffff2;
+            color: #0e1111;
+            border-color: #0e1111;
+        }
+        
+        .darkbuttonmob {
+            background-color: #fffff2;
+            color: #0e1111;
+            border-color: #0e1111;
+        }
+        
+        .darkbutton:hover {
+            background-color: #0e1111;
+            color: #fffff2;
+            border-color: #fffff2;
+        }
+        
+        .lighttext {
+            color: #333b3b;
+        }
+        /* footer */
+        
+        footer {
+            z-index: 99;
+            bottom: 0;
+            height: 50px;
+            background: url(pics/noiselight.png) bottom center repeat;
+            width: 100%;
+            border-top: 3px;
+            border-bottom: 0;
+            border-left: 0;
+            border-right: 0;
+            border-style: solid;
+            border-color: #0e1111;
+            transition: all 0.2s ease;
+            position: absolute;
+        }
+        
+        .footul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .footli {
+            float: left;
+        }
+        
+        .foota {
+            font-family: 'Bebas Neue', cursive;
+            text-decoration: none;
+            font-weight: lighter;
+        }
+        /*Site-Specific*/
+        
+        main {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+        }
+        
+        #vid {
+            height: auto
+        }
+    </style>
+    <script>
+        //Darkmode (enbart för större skärmar)
+        var foota = document.getElementsByClassName('foota')
+        $(document).ready(function() {
+            $(".foota").addClass("lighttext");
+            $('.theme').on("click", function()
+
+                {
+                    if ($("body").hasClass("dark")) {
+                        $("body").removeClass("dark");
+                        $(".header").removeClass("darknav");
+                        $(".nava").removeClass("darktext");
+                        $("#carti").removeClass("darktext");
+                        $(".logo").attr("src", "pics/logosvartcirk.png");
+                        $(".theme").removeClass("darkbutton");
+                        $(".theme").removeClass("darkbutton:hover");
+                        $("footer").removeClass("darknav");
+                        $(".foota").addClass("lighttext");
+                        $(".foota").removeClass("darktext");
+
+                    } else {
+                        $("body").addClass("dark");
+                        $(".header").addClass("darknav");
+                        $(".nava").addClass("darktext");
+                        $("#carti").addClass("darktext");
+                        $(".logo").attr("src", "pics/logovit.png");
+                        $(".theme").addClass("darkbutton");
+                        $(".theme").addClass("darkbutton:hover");
+                        $("footer").addClass("darknav");
+                        $(".foota").addClass("darktext");
+                        $(".foota").removeClass("lighttext");
+                    }
+
+                });
+
+        });
+
+        //Kontrollera Nav för mobil
+        function show() {
+            document.getElementById('navside').classList.toggle('active');
+            burger.classList.toggle('toggle')
+        }
+    </script>
+</head>
+
+<body>
+
+    <!--MOBILNAV-->
+    <header>
+
+        <nav class="navmob">
+
+            <ul class="navulmob">
+
+                <li class="navlimob">
+
+                    <div id="burger" onclick="show()">
+                        <div id="line1"></div>
+                        <div id="line2"></div>
+                        <div id="line3"></div>
+                    </div>
+                </li>
+                <li class="navlimob">
+                    <div class="logomobdiv"><img class="logomob" src="pics/logosvartcirk.png" alt="logo"></div>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <div class="sidebtnmob">
+
+            <a id="cartmob" href="#"><i id="cartimob" class="fa fa-shopping-cart fa-lg" ></i></a>
+        </div>
+    </header>
+
+    <!--NAV LINKS SIDE-->
+
+    <div id="navside">
+        <ul class="navsideul">
+
+            <li class="navsideli"><a href="#" class="navsidea">Shop</a></li>
+            <li class="navsideli"><a href="#" class="navsidea">Gallery</a></li>
+            <li class="navsideli"><a href="#" class="navsidea">About</a></li>
+            <li class="navsideli"><a href="#" class="navsidea">Contact</a></li>
+
+        </ul>
+    </div>
+
+    <!--DATORNAV-->
+
+    <div class="header">
+        <img class="logo" src="pics/logosvartcirk.png" alt="logo">
+        <nav>
+            <ul class="navul">
+                <li class="navli"><a class="nava" href="#">Shop </a></li>
+                <li class="navli"><a class="nava" href="#">Gallery</a></li>
+                <li class="navli"><a class="nava" href="#">About </a></li>
+                <li class="navli"><a class="nava" href="#">Contact</a></li>
+            </ul>
+
+        </nav>
+        <div class="sidebtn">
+            <a id="cart" href="#"><i id="carti" class="fa fa-shopping-cart fa-lg" ></i></a>
+            <button class="theme">Mode</button>
+
+        </div>
+
+    </div>
+
+
+    <main>
+        <a id="anchortop"></a>
+        <!--<div class="video">
+            <video autoplay muted loop id="vid">
+                <source src="pics/Orions.mp4" type="video/mp4">
+              </video>
+        </div>
+        <p></p>-->
+
+    </main>
+    <footer>
+        <ul class="footul">
+            <li class="footli"><a class="foota" href="#anchortop">TO TOP</a></li>
+            <li class="footli"><a class="foota" href="#">INSTAGRAM</a></li>
+            <li class="footli"><a class="foota" href="#">OUR BUSINESS</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
