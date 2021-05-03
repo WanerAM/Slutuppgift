@@ -342,7 +342,7 @@ li.navsideli {
 footer {
     z-index: 99;
     bottom: 0;
-    height: 50px;
+    height: 30px;
     background: url(../pics/noiselight.png) bottom center repeat;
     width: 100%;
     border-top: 3px;

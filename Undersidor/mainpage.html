@@ -65,17 +65,18 @@
             text-align: center;
             font-size: 2.5vw;
             transition: 0.2s ease;
-            margin-top:30px;
-            margin-bottom:30px;
-            
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
-        #textsection{
-            display:flex;
-            width:100%;
-            float:left;
-            height:70vh;
-            overflow:hidden;
+        
+        #textsection {
+            display: flex;
+            width: 100%;
+            float: left;
+            height: 70vh;
+            overflow: hidden;
             border-style: solid;
+            border-left-width: 0px;
             border-bottom-color: #0e1111;
             border-bottom-width: 3px;
             border-top-width: 3px;
@@ -83,140 +84,171 @@
             box-shadow: 0px 6px 20px 13px rgba(0, 0, 0, 0.52);
             margin-bottom: 40px;
             cursor: pointer;
-            
         }
-        #textsection:hover{
+        
+        #textsection:hover {
             box-shadow: 0px 10px 30px 20px rgba(0, 0, 0, 0.9);
-            
         }
-        #textsection:hover .col1 p{
-           font-size:5.2vw;
-            
+        
+        #textsection:hover .col1 p {
+            font-size: 5.2vw;
         }
-        #textsection:hover .balte{
-           width:270%
-            
+        
+        #textsection:hover .balte {
+            width: 270%
         }
-        .col1{
-            display:flex;
-            width:50%;
-            float:left;
-            padding-left:3vw;
-            padding-right:3vw;
-            font-family:'Bebas Neue', cursive;
+        
+        .col1 {
+            display: flex;
+            width: 50%;
+            float: left;
+            padding-left: 3vw;
+            padding-right: 3vw;
+            font-family: 'Bebas Neue', cursive;
             font-weight: bold;
             font-size: 5vw;
             align-items: center;
-            
         }
-        .col1 p{
+        
+        .col1 p {
             text-align: center;
-            height:fit-content;
-            transition:0.2s ease;
+            height: fit-content;
+            transition: 0.2s ease;
         }
-        .col2{
-            float:left;
-            position:relative;
-            overflow:hidden;
-            display:flex;
-            width:50%;
-            height:70vh;
+        
+        .col2 {
+            float: left;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            width: 50%;
+            height: 70vh;
             vertical-align: middle;
         }
-        .balte{
+        
+        .balte {
             position: absolute;
             top: -9999px;
             bottom: -9999px;
             left: -9999px;
             right: -9999px;
             margin: auto;
-            width:250%;
-            transition:0.2s ease;
+            width: 250%;
+            transition: 0.2s ease;
         }
-        .baltemob{
-            position:relative;
-            width:200%;
-            top:-50%;
-            left:-50%;
-            margin:auto;
+        
+        .baltemob {
+            position: relative;
+            width: 200%;
+            top: -18vw;
+            left: -50%;
+            margin: auto;
+            overflow: hidden;
         }
-        .col1mob{
-            position:absolute;
+        
+        .col1mob {
+            position: absolute;
         }
-        .col1mob p{
-            color:#fffff2;
-
+        
+        .col1mob p {
+            color: #fffff2;
         }
-
-        #textsectionmob{
-                width:100vw;
-                height:400px;
-                display:none;
-                overflow-x:hidden;
-            }
-
+        
+        #textsectionmob {
+            width: 100vw;
+            height: 400px;
+            display: none;
+            overflow-x: hidden;
+            cursor: pointer;
+            border-top: solid #0e1111 3px;
+            box-shadow: 0px 6px 20px 20px rgba(0, 0, 0, 0.52);
+        }
+        
         @media(max-width:529px) {
-        #citation{
-            font-size: 4vw;
-        }
-   
-        }
-        @media(max-width:900px){
-            #textsection{
-                display:none;
-            }
-            #textsectionmob{
-                display:flex;
+            #citation {
+                font-size: 4vw;
             }
         }
-        #flscreen{
-            position:fixed;
-            width:100%;
-            height:100%;
+        
+        @media(max-width:900px) {
+            #textsection {
+                display: none;
+            }
+            #textsectionmob {
+                display: flex;
+            }
+        }
+        
+        #flscreen {
+            position: fixed;
+            width: 100%;
+            height: 100%;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0,0,0,0.9); 
-            display:none;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
             z-index: 98;
-            cursor:pointer;
-            
-   } 
-   .flscreenshow{
-            display:block;
-   }
-    .beltimg{
-            position:absolute;
-            top:52%;
-            left:50%;
-            transform: translate(-50%,-50%);
-            width:55vw;
+            cursor: pointer;
+        }
+        
+        .flscreenshow {
+            display: block;
+        }
+        
+        .beltimg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 55vw;
             min-width: 400px;
-            max-width:1000px;
-            text-align:center;
-    }
-    #flscreen a{
-            font-family:'Bebas Neue', cursive;
+            max-width: 700px;
+            text-align: center;
+        }
+        
+        #flscreen a {
+            font-family: 'Bebas Neue', cursive;
             text-decoration: underline;
-            color:#fffff2;
+            color: #fffff2;
             font-size: 25px;
-            left:50%;
-            padding:3px; 
-            transition:0.1s ease; 
-    }
-    #flscreen a:hover{
-            color:#80807e  
-    }
-    #flscreen p{
-            color:gray;
-            margin-top:2px;
-            font-family:'Bebas Neue', cursive;
-    }
-
-    .beltimg img{width:100%;}
-
-    
+            left: 50%;
+            padding: 3px;
+            transition: 0.1s ease;
+        }
+        
+        #flscreen a:hover {
+            color: #80807e
+        }
+        
+        #flscreen p {
+            color: gray;
+            margin-top: 2px;
+            font-family: 'Bebas Neue', cursive;
+        }
+        
+        .beltimg img {
+            width: 100%;
+        }
+        
+        .titlemob {
+            text-align: center;
+            vertical-align: middle;
+            width: 100vw;
+            position: absolute;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            color: #0e1111;
+            font-size: 5vw;
+            z-index: 10;
+            background-color: #fffff2;
+            font-weight: bold;
+        }
+        
+        .col2mob {
+            overflow: hidden;
+        }
     </style>
 
 </head>
@@ -294,7 +326,6 @@
         <a id="anchortop"></a>
         <div class="container">
 
-
             <div class="col">
                 <div class="title">ORIONS BELT</div>
 
@@ -308,22 +339,25 @@
         </section>
 
         <div id="textsection">
-            <div class="col1"><p>Press here to check out our latest release: <br>"Clouded Minds"</p></div>
-            <div class="col2"><img class="balte" alt="belt" src="../pics/balte.jpg"></div></div>
+            <div class="col1">
+                <p>Press here to check out our latest release: <br>"Clouded Minds"</p>
+            </div>
+            <div class="col2"><img class="balte" alt="belt" src="../pics/balte.jpg"></div>
+        </div>
         <div id="textsectionmob">
-            <div class="col1mob"><p>Press here to check out our latest release: <br>"Clouded Minds"</p></div>
+            <div class="titlemob">Press here to check out our latest release: <br>"Clouded Minds"</div>
             <div class="col2mob"><img class="baltemob" alt="belt" src="../pics/balte.jpg"></div>
         </div>
-        
+
         <div id="flscreen">
-            <div class="beltimg"><img alt="belt" src="../pics/balte.jpg"><a href="#">ADD TO CART</a><p>Press anywhere to close</p></div>
-            
+            <div class="beltimg"><img alt="belt" src="../pics/balte.jpg"><a href="#">VISIT SHOP</a>
+                <p>Press anywhere to close</p>
+            </div>
+
         </div>
-        
-
-
 
     </main>
+
     <footer>
         <ul class="footul">
             <li class="footli"><a class="foota" href="#anchortop">TO TOP</a></li>
