@@ -16,6 +16,10 @@ $(document).ready(function() {
                 $("footer").removeClass("darknav");
                 $(".foota").addClass("lighttext");
                 $(".foota").removeClass("darktext");
+                $(".container").removeClass("containerdark");
+                $("#citation").removeClass("darktext");
+                $("p").removeClass("darktext");
+                $("#textsection").removeClass("darks");
 
             } else {
                 $("body").addClass("dark");
@@ -28,6 +32,10 @@ $(document).ready(function() {
                 $("footer").addClass("darknav");
                 $(".foota").addClass("darktext");
                 $(".foota").removeClass("lighttext");
+                $(".container").addClass("containerdark");
+                $("#citation").addClass("darktext");
+                $("p").addClass("darktext");
+                $("#textsection").addClass("darks");
             }
 
         });
@@ -38,4 +46,4 @@ $(document).ready(function() {
 function show() {
     document.getElementById('navside').classList.toggle('active');
     burger.classList.toggle('toggle')
-}
+};
