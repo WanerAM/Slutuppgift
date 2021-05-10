@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/cssuniversal.css">
+    <link rel="stylesheet" href="../css/cssshop.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/jsuniversal.js"></script>
+    <script src="../js/jsshop.js"></script>
+    <title>Orions Belt</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        main {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0;
+            height: 100%;
+        }
+        
+        #topbanner {
+            width: 100%;
+            margin: 0;
+        }
+        
+        #topbannertext {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 40px;
+            color: #0e1111;
+            padding-top: 10px;
+            font-weight: lighter;
+            margin: 0;
+        }
+        
+        .shopcontainer {
+            width: 100%;
+        }
+        
+        .shopul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .shopa {
+            color: #727474;
+            font-family: 'Bebas Neue', cursive;
+            font-weight: lighter;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.2s ease
+        }
+        
+        .shopa:hover {
+            color: #0e1111;
+            text-decoration: underline;
+        }
+        
+        .hover {
+            color: #0e1111;
+            text-decoration: underline;
+        }
+        
+        .shopli {
+            margin-bottom: 6px;
+        }
+        
+        .shopnav {
+            float: left;
+            width: 20%;
+        }
+        
+        .products-news {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 50% 50%;
+            background-color: #dddddb;
+            padding: 10px;
+            height: 100vh;
+            margin-bottom: 60px;
+        }
+        
+        .products-belts {
+            display: none;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 50% 50%;
+            background-color: #dddddb;
+            padding: 10px;
+            height: 100vh;
+            margin-bottom: 60px;
+        }
+        
+        .products-other {
+            display: none;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 50% 50%;
+            background-color: #dddddb;
+            padding: 10px;
+            height: 100vh;
+            margin-bottom: 60px;
+        }
+        
+        .shopitem {
+            text-align: center;
+            overflow: hidden;
+            margin: 5px;
+            transition: 0.2s ease;
+            border: solid black 2px;
+            background-color: white;
+        }
+        
+        .articimg {
+            display: flex;
+            height: 70%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .articimg img {
+            z-index: 1;
+            display: block;
+            position: absolute;
+            width: 140%;
+            transition: 0.4s ease;
+            top: -9999px;
+            bottom: -9999px;
+            left: -9999px;
+            right: -9999px;
+            margin: auto;
+        }
+        
+        .articimg .patch {
+            z-index: 1;
+            display: block;
+            position: absolute;
+            width: 160%;
+            transition: 0.4s ease;
+            top: -9999px;
+            bottom: -9999px;
+            left: -9999px;
+            right: -9999px;
+            margin: auto;
+        }
+        
+        .shopitem .text {
+            z-index: 2;
+            background-color: #fffff2;
+            color: #0e1111;
+            text-align: center;
+            font-family: 'Calibri';
+            font-size: 17px;
+            height: 30%;
+            line-height: 30px;
+        }
+        
+        .shopitem:hover {
+            box-shadow: 0px 0px 17px -1px rgba(0, 0, 0, 0.75);
+        }
+        
+        .shopitem:hover .belt {
+            width: 160%;
+        }
+        
+        .shopitem:hover .patch {
+            width: 190%;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $(".shopli:nth-child(1)").click(function() {
+                $(".products-news").css({
+                    "display": "grid"
+                })
+                $(".products-belts").css({
+                    "display": "none"
+                })
+                $(".products-other").css({
+                    "display": "none"
+                })
+                $(".shopli:nth-child(3) a").removeClass("hover");
+                $(".shopli:nth-child(2) a").removeClass("hover");
+                $(".shopli:nth-child(1) a").addClass("hover");
+            })
+
+            $(".shopli:nth-child(2)").click(function() {
+                $(".products-news").css({
+                    "display": "none"
+                })
+                $(".products-belts").css({
+                    "display": "grid"
+                })
+                $(".products-other").css({
+                    "display": "none"
+                })
+                $(".shopli:nth-child(3) a").removeClass("hover");
+                $(".shopli:nth-child(2) a").addClass("hover");
+                $(".shopli:nth-child(1) a").removeClass("hover");
+            })
+
+            $(".shopli:nth-child(3)").click(function() {
+                $(".products-news").css({
+                    "display": "none"
+                })
+                $(".products-belts").css({
+                    "display": "none"
+                })
+                $(".products-other").css({
+                    "display": "grid"
+                })
+                $(".shopli:nth-child(3) a").addClass("hover");
+                $(".shopli:nth-child(2) a").removeClass("hover");
+                $(".shopli:nth-child(1) a").removeClass("hover");
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <!--MOBILNAV-->
+    <header>
+
+        <nav class="navmob">
+
+            <ul class="navulmob">
+
+                <li class="navlimob">
+
+                    <div id="burger" onclick="show()">
+                        <div id="line1"></div>
+                        <div id="line2"></div>
+                        <div id="line3"></div>
+                    </div>
+                </li>
+                <li class="navlimob">
+                    <div class="logomobdiv">
+                        <a href="mainpage.html"><img class="logomob" src="../pics/logosvartcirk.png" alt="logo"></a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <div class="sidebtnmob">
+
+            <a id="cartmob" href="#"><i id="cartimob" class="fa fa-shopping-cart fa-lg" ></i></a>
+        </div>
+    </header>
+
+    <!--NAV LINKS SIDE-->
+
+    <div id="navside">
+        <ul class="navsideul">
+
+            <li class="navsideli"><a href="shop.html" class="navsidea">Shop</a></li>
+            <li class="navsideli"><a href="#" class="navsidea">Gallery</a></li>
+            <li class="navsideli"><a href="#" class="navsidea">About</a></li>
+            <li class="navsideli"><a href="#" class="navsidea">Contact</a></li>
+
+        </ul>
+    </div>
+
+    <!--DATORNAV-->
+
+    <div class="header">
+        <a href="mainpage.html"><img class="logo" src="../pics/logosvartcirk.png" alt="logo"></a>
+        <nav>
+            <ul class="navul">
+                <li class="navli"><a class="nava" style="font-weight: 700;" href="shop.html">Shop </a></li>
+                <li class="navli"><a class="nava" href="#">Gallery</a></li>
+                <li class="navli"><a class="nava" href="#">About </a></li>
+                <li class="navli"><a class="nava" href="#">Contact</a></li>
+            </ul>
+
+        </nav>
+        <div class="sidebtn">
+            <a id="cart" href="#"><i id="carti" class="fa fa-shopping-cart fa-lg" ></i></a>
+            <button class="theme">Mode</button>
+
+        </div>
+
+    </div>
+
+    <!--Content-->
+
+    <main>
+        <a id="anchortop"></a>
+        <div id="topbanner">
+            <h1 id="topbannertext">All Products</h1>
+        </div>
+        <div class="shopcontainer">
+            <nav class="shopnav">
+                <ul class="shopul">
+                    <li class="shopli"><a class="shopa">News</a></li>
+                    <li class="shopli"><a class="shopa">Belts</a></li>
+                    <li class="shopli"><a class="shopa">Other</a></li>
+                </ul>
+            </nav>
+            <div class="products-news">
+                <div class="shopitem">
+                    <a style="text-decoration: none;" href="#">
+                        <div class="articimg"><img class="belt" alt="belt" src="../pics/shopbalte.png"></div>
+                        <div class="text"><b>"CLOUDED MINDS"</b><br><i><small>CUSTOM DESIGNED BELT</small></i><br><strong>290:-</strong></div>
+                    </a>
+                </div>
+                <div class="shopitem">
+                    <a style="text-decoration: none;" href="#">
+                        <div class="articimg"><img class="patch" alt="cloud" src="../pics/cloud.jpg"></div>
+                        <div class="text"><b>CLOUD PATCH</b><br><i><small>CUTE & ORIGINAL PATCH</small></i><br><strong>25:-</strong></div>
+                    </a>
+                </div>
+
+                <div class="shopitem">
+                    <div class="text">COMING SOON</div>
+                </div>
+                <div class="shopitem">
+                    <div class="text">COMING SOON</div>
+                </div>
+                <div class="shopitem">
+                    <div class="text">COMING SOON</div>
+                </div>
+                <div class="shopitem">
+                    <div class="text">COMING SOON</div>
+                </div>
+                <div class="shopitem">
+                    <div class="text">COMING SOON</div>
+                </div>
+                <div class="shopitem">
+                    <div class="text">COMING SOON</div>
+                </div>
+            </div>
+            <div class="products-belts">
+                <div class="shopitem">
+                    <a style="text-decoration: none;" href="#">
+                        <div class="articimg"><img class="belt" alt="belt" src="../pics/shopbalte.png"></div>
+                        <div class="text"><b>"CLOUDED MINDS"</b><br><i><small>CUSTOM DESIGNED BELT</small></i><br><strong>290:-</strong></div>
+                    </a>
+                </div>
+            </div>
+            <div class="products-other">
+                <div class="shopitem">
+                    <a style="text-decoration: none;" href="#">
+                        <div class="articimg"><img class="patch" alt="cloud" src="../pics/cloud.jpg"></div>
+                        <div class="text"><b>CLOUD PATCH</b><br><i><small>CUTE & ORIGINAL PATCH</small></i><br><strong>25:-</strong></div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <ul class="footul">
+            <li class="footli"><a class="foota" href="#anchortop">TO TOP</a></li>
+            <li class="footli"><a class="foota" href="https://www.instagram.com/orionsbelt_uf/" target="_blank">INSTAGRAM</a></li>
+            <li class="footli"><a class="foota" href="#">OUR BUSINESS</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

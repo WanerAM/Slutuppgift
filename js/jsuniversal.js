@@ -36,6 +36,7 @@ $(document).ready(function() {
                 $("#citation").addClass("darktext");
                 $("p").addClass("darktext");
                 $("#textsection").addClass("darks");
+
             }
 
         });
