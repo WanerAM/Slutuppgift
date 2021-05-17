@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    height: 100%;
+}
+
+#topbanner {
+    width: 100%;
+    margin: 0;
+}
+
+.topbannertext {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    padding-top: 10px;
+    font-weight: lighter;
+    margin: 0;
+    transition: 0.2s;
+}
+
+.shopcontainer {
+    width: 100%;
+}
+
+.shopul {
+    list-style: none;
+    padding: 0;
+}
+
+.shopa {
+    color: #727474;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: lighter;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.2s ease
+}
+
+.shopa:hover {
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+.hover {
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+.shopli {
+    margin-bottom: 6px;
+}
+
+.shopnav {
+    float: left;
+    width: 20%;
+}
+
+.products-news {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: 2fr;
+    background-color: #dddddb;
+    padding: 10px;
+    height: fit-content;
+    margin-bottom: 60px;
+}
+
+.products-belts {
+    display: none;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    background-color: #dddddb;
+    padding: 10px;
+    height: 100vh;
+    margin-bottom: 60px;
+}
+
+.products-other {
+    display: none;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    background-color: #dddddb;
+    padding: 10px;
+    height: 100vh;
+    margin-bottom: 60px;
+}
+
+.shopitem {
+    display: flex;
+    justify-content: space-evenly;
+    -ms-flex-item-align: auto;
+    text-align: center;
+    overflow: hidden;
+    margin: 5px;
+    transition: 0.2s ease;
+    border: solid black 2px;
+    background-color: white;
+    height: 300px;
+}
+
+.articimg {
+    display: flex;
+    height: 70%;
+    overflow: hidden;
+    position: relative;
+    align-items: baseline;
+}
+
+.articimg img {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    width: 130%;
+    transition: 0.4s ease;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+}
+
+.articimg .patch {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    width: 160%;
+    transition: 0.4s ease;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+}
+
+.shopitem .text {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column;
+    z-index: 2;
+    color: #0e1111;
+    text-align: center;
+    font-family: 'Calibri';
+    font-size: 17px;
+    margin-top: 10px
+}
+
+.ashop1 {
+    text-decoration: none;
+    width: 100%
+}
+
+.ashop2 {
+    text-decoration: none;
+    width: 100%
+}
+
+.shopitem:hover {
+    box-shadow: 0px 0px 17px -1px rgba(0, 0, 0, 0.75);
+}
+
+.shopitem:hover .belt {
+    width: 150%;
+}
+
+.shopitem:hover .patch {
+    width: 190%;
+}
+
+@media(min-width:1080px) {
+    .articimg img {
+        width: 110%
+    }
+    .shopitem:hover .belt {
+        width: 130%;
+    }
+}
+
+@media(max-width: 1080px) {
+    .products-news {
+        grid-template-columns: 33% 33% 33%;
+    }
+    .products-belts {
+        grid-template-columns: 33% 33% 33%;
+    }
+    .products-other {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media(max-width:820px) {
+    .products-news {
+        grid-template-columns: 50% 50%;
+    }
+    .products-belts {
+        grid-template-columns: 50% 50%;
+    }
+    .products-other {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media(max-width:529px) {
+    .products-news {
+        grid-template-columns: 100%;
+    }
+    .products-belts {
+        grid-template-columns: 100%;
+    }
+    .products-other {
+        grid-template-columns: 100%;
+    }
+}
