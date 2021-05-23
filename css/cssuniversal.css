@@ -339,7 +339,9 @@ li.navsideli {
 .lighttext {
     color: #333b3b;
 }
-
+.darkback {
+    background-color: #333b3b;
+}
 
 
 

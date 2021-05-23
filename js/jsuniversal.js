@@ -17,7 +17,7 @@ $(document).ready(function() {
                 $(".foota").addClass("lighttext");
                 $(".container").removeClass("containerdark");
                 $("#textsection").removeClass("darks");
-
+                $(".shopsection").removeClass("darkback");
 
 
 
@@ -32,7 +32,7 @@ $(document).ready(function() {
                 $(".foota").removeClass("lighttext");
                 $(".container").addClass("containerdark");
                 $("#textsection").addClass("darks");
-
+                $(".shopsection").addClass("darkback");
 
 
 
@@ -48,5 +48,3 @@ function show() {
     burger.classList.toggle('toggle')
 };
 
-//Ifall dark är enabled = set null
-//Annars set = enable

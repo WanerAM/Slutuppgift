@@ -14,41 +14,17 @@
 
     <script src="../js/jsproduct.js"></script>
 
+    <script src="../js/splide-2.4.21/dist/js/splide.min.js"></script>
+
+    <link rel="stylesheet" href="../js/splide-2.4.21/dist/css/splide.min.css">
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <title>PRODUCT</title>
     <script>
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-        .demo {
-            width: 100%;
-            height: 85%;
-            border: black solid 2px;
-        }
-        
-        .info {
-            float: left;
-            margin-left: 10%;
-        }
-        
-        .shopsection {
-            display: grid;
-            margin-left: auto;
-            margin-right: auto;
-            width: 90%;
-            height: 100vh;
-            grid-template-columns: 70% 30%
-        }
-        
-        h1 {
-            margin-bottom: 0px;
-            font-family: 'Bebas Neue', cursive;
-        }
-        
-        .undertext {
-            font-family: 'Calibri';
-        }
+
     </style>
 </head>
 
@@ -122,18 +98,39 @@
 
     <!--Content-->
 
+    <div id="addedobject">Object added</div>
     <main>
         <a id="anchortop"></a>
 
         <div class="shopsection">
 
-            <div class="demo"></div>
-            <div class="info">
-                <h1></h1>
-                <p style="margin-top:0px;"><i class="undertext"></i></p>
+            <div class="splide" data-splide='{"cover":"true","height":"70vh","type":"loop", "drag": "true"}'>
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="splide__slide__container"><img src="../pics/balte.jpg" alt="balte1"></div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container"><img src="../pics/slidebild1.jpg" alt="balte2"></div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="splide__slide__container"><img src="../pics/slidebild2.jpg" alt="balte3"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="info">
+                <div>
+                    <h1></h1>
+                    <p class="punderclass" style="margin-top:0px;"><i class="undertext"></i></p>
+                </div>
+
+                <p class="infotext"></p>
+                <p class="material">Materials: <br>High quality polyester<br>2x iron D-rings<br>1x wool / polyester patch</p>
+                <div><button class="buy">ADD TO CART</button></div>
+
             </div>
         </div>
-
 
     </main>
 
