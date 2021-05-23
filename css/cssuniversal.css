@@ -1,4 +1,9 @@
+/*CSS dokument för de delar på hemsidan som sträcker sig över alla undersidor. Med andra ord Nav, footer och darkmode-klasser*/
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.containerdark {
+    border-bottom-color: #fffff2;
+}
 body {
     margin: 0px;
     overflow-y: scroll;

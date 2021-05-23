@@ -1,3 +1,5 @@
+/*CSS dokument för huvudsidan*/
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .container {
     display: flex;
@@ -10,10 +12,6 @@
     border-bottom-width: 3px;
     transition: 0.2s ease;
     box-shadow: 0px 6px 20px 13px rgba(0, 0, 0, 0.52);
-}
-
-.containerdark {
-    border-bottom-color: #fffff2;
 }
 
 #vid {
@@ -144,9 +142,10 @@
     cursor: pointer;
     border-top: solid #0e1111 3px;
     box-shadow: 0px 6px 20px 20px rgba(0, 0, 0, 0.52);
+    margin-bottom: 30px;
 }
 
-@media(max-width:900px) {
+@media(max-width:1120px) {
     #textsection {
         display: none;
     }

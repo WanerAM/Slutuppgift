@@ -1,4 +1,4 @@
-//Darkmode (enbart för större skärmar)
+//Detta är ett universellt .js dokument för alla undersidor. Här justeras darkmode med hjälp av klasser.
 
 var foota = document.getElementsByClassName('foota');
 $(document).ready(function() {
@@ -19,8 +19,6 @@ $(document).ready(function() {
                 $("#textsection").removeClass("darks");
                 $(".shopsection").removeClass("darkback");
 
-
-
             } else {
                 $("body").addClass("dark");
                 $(".header").addClass("darknav");
@@ -33,16 +31,13 @@ $(document).ready(function() {
                 $(".container").addClass("containerdark");
                 $("#textsection").addClass("darks");
                 $(".shopsection").addClass("darkback");
-
-
-
             }
 
         });
 
 });
 
-//Kontrollera Nav för mobil
+//Denna kod ändrar classlist för sidonaven på mobilen. När den är aktiv glider navbaren ut och det kontrolleras av "burger", de tre strecken upp till vänster.
 function show() {
     document.getElementById('navside').classList.toggle('active');
     burger.classList.toggle('toggle')
